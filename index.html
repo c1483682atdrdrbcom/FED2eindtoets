@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ultimate frisbee score applicatie</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/swiper.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<header>	
+		<h1>Ultimate Frisbee wedstrijd applicatie</h1>
+		<div id='loader'><img src="images/round-loader2.gif" title="loader" id="loadimg"/></div>
+		<nav>
+			<ul>
+				<li><a href="#/ranking">Rankings</a></li>
+				<li><a href="#/schedule">Schema</a></li>
+		    </ul>
+		</nav>
+	</header>
+
+	
+	<article id="content" class=" swiper-container">
+
+	<div class="swiper-wrapper">
+		<section data-route="ranking" class="active swiper-slide">
+			<div data-bind="objects">
+				<table>
+					<tr>
+						<th>Team</th>
+						<th>Games gespeeld</th>
+						<th>Gewonnen</th>
+						<th>Verloren</th>
+						<th>Punten gewonnen</th>
+						<th>Punten verloren</th>
+						<th>+/-</th>
+					</tr>
+					
+					<tbody data-bind="standings">
+						<tr>
+							<td data-bind="team"><span data-bind="name"></span></td>
+							<td data-bind="games_played"></td>
+							<td data-bind="wins"></td>
+							<td data-bind="losses"></td>
+							<td data-bind="points_scored"></td>
+							<td data-bind="points_allowed"></td>
+							<td data-bind="plus_minus"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		
+		<section data-route="schedule" class="swiper-slide">
+				 <table>
+				 	<tr>
+				 		<th>Start-tijd</th>
+				 		<th>Team 1</th>
+				 		<th>Team 2</th>
+				 		<th>Score</th>
+				 		<th>Update de score</th>
+				 	</tr>
+					<tbody data-bind="objects">
+						<tr>
+							<td id="starttijd" data-bind="time"></td>
+							<td data-bind="team_1"><span data-bind="name"></span></td>
+							<td data-bind="team_2"><span data-bind="name"></span></td>
+							<td id="updatescore"><span data-bind="team_1_score"></span> - <span data-bind="team_2_score"></span></td>
+							<td id="updateknop"><a data-bind="update_score">Update de score hier</a></td>
+						</tr>
+					</tbody>
+				</table>			
+		</section>
+		
+		<section data-route="game" id="game">			
+			<table>
+				 	<tr>
+				 		<th>Vul de resultaten van de wedstrijd in en klik op verzenden</th>
+				 	</tr>
+				 </table>
+			<form>
+        		<label data-bind="team_1"><span data-bind="name"></span><input type="number" data-bind="team_1_score" id="team1score"></input></label>
+        		<label data-bind="team_2"><span data-bind="name"></span><input type="number" data-bind="team_2_score" id="team2score"></input></label>
+        		<div id="submit"><a href="#/schedule">verzenden</a></div>
+
+		</section>
+
+		</div>
+
+	</article>
+
+	<!-- JS Libs -->
+	<script src="js/lib/routie.min.js"></script>
+	<script src="js/lib/ready.min.js" type="text/javascript"></script>
+	<script src="js/lib/qwery.min.js" type="text/javascript"></script>
+	<script src="js/lib/transparancy.min.js" type="text/javascript"></script>
+	<script src="js/lib/promise.min.js" type="text/javascript"></script>
+	<script src="js/lib/swiper.min.js" type="text/javascript"></script>
+
+	<!-- Application, oftewel app.js -->
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

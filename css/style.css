@@ -1,0 +1,273 @@
+html {
+height: 100%;
+}
+
+body {
+	font-size:100%;
+	font-family: "arial"; 
+	font-weight: 300;
+	color:#333;
+	background-color: #fff;
+	height: 100%;
+}
+
+a {
+	font-weight:bold;
+	color:#000;
+	-webkit-transition:all .5s ease;
+}
+
+a:hover {
+	color:#ffb400;
+	background-color: #f4f4f4;
+}
+
+ul {
+	list-style:none;
+	margin: 0 auto;
+	padding:0;
+}
+
+ul li {
+	padding-bottom: 0.5em;
+}
+
+ul li a {
+	display:block;
+	border-color:#333;
+	border-style:solid;
+	border-width:1px 0 0;
+	background-color: #f5f5f5;
+	line-height:2;
+	text-decoration: none;
+	padding:0 2%;
+}
+			
+ul li a strong {
+	display:block;
+	font-weight:normal;
+	color:#333;
+}
+
+ul li:last-child a {
+	border-bottom-width:1px;
+}
+
+ul li a:hover {
+	background-color: #eee;
+}
+
+
+
+/* loader */
+
+div#loader {
+	display: none;
+	position: absolute;
+	right:10%;
+	top:0%;
+	height:50px;
+}
+
+img#loadimg {
+	margin-left: 45%;
+	margin-top: 0.5%;
+	padding-bottom: 10px;
+}
+
+
+
+/* header section */
+
+header {
+	position:relative;
+	padding:0 .5em;
+	background-color: #f4bd15;
+	}
+
+header h1 {
+	padding: 0.3em;
+	font-family: "verdana";
+	color: #fff;
+	font-style: bold;
+	font-size: 2.1em;
+	}
+
+
+
+/*Tabellen*/
+
+table {
+	width: 100%;
+	background-color: white;
+	}
+
+table th {
+	background-color: #000000;
+	width: 100px;
+	color: #f4bd15;
+	font-weight: normal;
+	padding: 0.4em;
+}
+
+table tr {
+	background-color: #fbdc7c;
+	}
+
+table td {
+	width: 8%;
+	padding: 0.5em;
+}
+
+tbody {
+	width:100%;
+}
+
+table tr:nth-child(2n+1){
+	background-color: white;
+	}
+
+td#datatime {
+	text-align: center;
+}
+
+td#updateknop {
+	text-align: center;
+}
+
+td#updatescore {
+	text-align: center;
+}
+
+td#starttijd {
+	text-align: center;
+}
+
+
+
+
+/* Content section */
+
+article#content {
+	clear:left;
+	width: 100%;
+	height: 100%;
+}
+
+#game {
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	height: 100%;
+	width: 50%;
+	background-color: white;
+	right:0;
+}
+
+#game.active {
+	display: block;
+}
+
+article > section {
+	display:block;
+	float: left;
+}
+	
+article > section.active {
+	display:block;
+}
+	
+article h1 {
+	margin-bottom: .5em;
+}
+	
+form p {
+	display: inline;
+}
+
+form {
+	margin-top: 1em;
+}
+
+form label {
+	float: left;
+	margin-left: 1em;
+	margin-right: 4em;
+}
+
+form span{
+	float: left;
+	clear: both;
+	margin-top: 1em;
+}
+
+form input {
+	float: right;
+	clear: both;
+}
+
+form label:first-of-type {
+	clear: both;
+}
+
+span {
+	text-align: center;
+}
+
+#submit {
+	font-weight: normal;
+	display: inline-block;
+	background:#f4bd15;
+	padding:5px 10px;
+	color:#ffffff;
+	text-decoration: none;
+	border-radius: 5px;
+	-webkit-transition:all .2s ease;
+	border:none;
+	clear: both;
+	float: left;
+	margin-top: 1em;
+	margin-left: 0.75em;
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1024px) {
+	
+	nav {
+		position:relative;
+		padding:.2em;
+	}
+	
+	nav ul li {
+		display:inline-block;
+		margin-right:.3em;
+	}
+	
+	nav ul li a {
+		font-weight: normal;
+		display: inline-block;
+		background:#eee;
+		padding:0px 80px;
+		color:#333;
+		text-decoration: none;
+		border-radius: 4px;
+		-webkit-transition:all .2s ease;
+		border:none;
+	}
+			
+	nav ul li a:hover {
+		background:#e0e0e0;
+		box-shadow:0 0 5px #aaa;
+		color:#333;
+	}
+
+@media only screen and (device-width: 320px){
+
+	header img {
+		display: none;
+	}
+}
