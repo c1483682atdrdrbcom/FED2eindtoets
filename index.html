@@ -24,6 +24,7 @@
 	<article id="content" class=" swiper-container">
 
 	<div class="swiper-wrapper">
+
 		<section data-route="ranking" class="active swiper-slide">
 			<div data-bind="objects">
 				<table>
@@ -63,7 +64,7 @@
 				 	</tr>
 					<tbody data-bind="objects">
 						<tr>
-							<td id="starttijd" data-bind="time"></td>
+							<td id="starttijd" data-bind="start_time"></td>
 							<td data-bind="team_1"><span data-bind="name"></span></td>
 							<td data-bind="team_2"><span data-bind="name"></span></td>
 							<td id="updatescore"><span data-bind="team_1_score"></span> - <span data-bind="team_2_score"></span></td>
@@ -80,8 +81,8 @@
 				 	</tr>
 				 </table>
 			<form>
-        		<label data-bind="team_1"><span data-bind="name"></span><input type="number" data-bind="team_1_score" id="team1score"></input></label>
-        		<label data-bind="team_2"><span data-bind="name"></span><input type="number" data-bind="team_2_score" id="team2score"></input></label>
+        		<label data-bind="team_1"><span data-bind="name"></span><input type="number" data-bind="team_1_score" id="team1score"></label>
+        		<label data-bind="team_2"><span data-bind="name"></span><input type="number" data-bind="team_2_score" id="team2score"></label>
         		<div id="submit"><a href="#/schedule">verzenden</a></div>
 
 		</section>
